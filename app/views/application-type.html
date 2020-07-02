@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/email">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+
+      <form class="form" action="/establishment-activities-throughput" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What type of application are you making?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="new-approval" name="new-approval" type="radio" value="New approval" aria-describedby="new-approval-hint">
+                <label class="govuk-label govuk-radios__label" for="new-approval">
+                  New approval
+                </label>
+                <span id="new-approval-hint" class="govuk-hint">
+                  A new food business operator or move to new premises
+                </span>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="change-of-fbo" name="change-of-fbo" type="radio" value="Change of Food Business Operator">
+                <label class="govuk-label govuk-radios__label" for="change-of-fbo">
+                  Change of Food Business Operator
+                </label>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="new-fsa-approval" name="new-fsa-approval" type="radio" value="New FSA approval"  aria-describedby="new-fsa-approval-hint">
+                <label class="govuk-label govuk-radios__label" for="new-fsa-approval">
+                  New Food Standards Agency approval
+                </label>
+                <span id="new-fsa-approval-hint" class="govuk-hint">
+                  Currently approved by the Local Authority
+                </span>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
