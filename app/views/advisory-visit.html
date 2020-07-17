@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/sops-cctv">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/check-your-answers" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Would you like to arrange an advisory visit?
+              </h1>
+              <span class="govuk-hint">
+                An advisory visit costs £253. A Field Vetinary Leader will visit your establishment to advise you on any changes that may need to be made in order to meet approval.
+              </span>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="advisory-visit-yes" name="advisory-visit" type="radio" value="yes" aria-describedby="new-approval-hint">
+                <label class="govuk-label govuk-radios__label" for="advisory-visit-yes">
+                  Yes
+                </label>
+                <span id="new-approval-hint" class="govuk-hint">
+                  A Field Vetinary Leader will contact you to arrange this visit.
+                </span>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="advisory-visit-no" name="advisory-visit" type="radio" value="no" aria-describedby="change-approval-hint">
+                <label class="govuk-label govuk-radios__label" for="advisory-visit-no">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
