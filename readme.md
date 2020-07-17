@@ -34,3 +34,13 @@ In order to use this prototype you will need [Node](https://nodejs.org/en/). You
 16. pest-control
 17. sops-cctv
 18. check-your-answers
+
+## Updated page navigation
+1. index
+2. start
+3. application-type
+4. branch - application-type-answer
+   1. change-of-fbo
+   2. (new approval goes straight to business type)
+   3. new-fbo-approval
+5. business-structure-type
