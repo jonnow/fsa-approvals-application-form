@@ -42,5 +42,44 @@ In order to use this prototype you will need [Node](https://nodejs.org/en/). You
 4. branch - application-type-answer
    1. change-of-fbo
    2. (new approval goes straight to business type)
-   3. new-fbo-approval
-5. business-structure-type
+   3. new-fsa-approval
+5. business-name
+6. business-structure-type
+7. branch - business-type-answer
+   1. incorporation > business-structure-incorporation --> Goes to:
+      1. business-company-information
+   2. partnership/sole-trader/other --> Goes to:
+8. business-structure-operator-name
+9. business-structure-operator-address
+10. operating-start-date
+11. telephone-number
+12. email
+13. type-of-establishment
+14. activities-throughput
+15. handling-animal-origin
+16. layout-plan
+17. location-map
+18. food-safety-management
+19. cleaning-maintenance
+20. abp-collector
+21. water-supply-quality - This should be split into arrangements and LA water test result.
+22. pest-control
+23. sops-cctv
+24. advisory-visit
+25. check-your-answers
+
+<!-- ddd -->
+<div class="govuk-summary-list__row">
+   <dt class="govuk-summary-list__key">
+   name
+   </dt>
+   <dd class="govuk-summary-list__value">
+   {{data['dataLink']}}
+   </dd>
+   <dd class="govuk-summary-list__actions">
+   <a href="/business-name">
+      Change
+      <span class="govuk-visually-hidden"> name</span>
+   </a>
+   </dd>
+</div>

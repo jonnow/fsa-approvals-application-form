@@ -35,13 +35,15 @@ router.post('/branching/application-type-answer', function (req, res) {
     case 'new-fsa-approval':
       res.redirect('/new-fsa-approval')
       break
+    case 'add-activities':
+      res.redirect('/change-of-fbo')
+      break
 
   }
 })
 
 router.post('/branching/business-type-answer', function (req, res) {
   const aprType = req.session.data['business-structure-type']
-
 
   switch (aprType) {
     case 'incorporation':
@@ -54,7 +56,7 @@ router.post('/branching/business-type-answer', function (req, res) {
       res.redirect('/business-structure-operator-name')
       break
     case 'other':
-      res.redirect('/business-structure-operator-name')
+      res.redirect('/business-structure-type-other')
       break
 
   }
@@ -74,11 +76,10 @@ router.post('/activities-throughput-2', function (req, res) {
       est_rewrapping = false;
 
       const sessionData = req.session.data['establishment-conditional'];
-      console.log(sessionData)
 
   if (sessionData.length > 0) {
     for (var i = 0; i < sessionData.length; i++) {
-      console.log(sessionData[i].includes + ' ' + i)
+      // Using if here as we are checking for includes rather than the full title. As this is a prototype this will suffice, will need to be looked at for production version.
       if (sessionData[i].includes("Slaughterhouse")) {
         est_slaughterhouse = true
       }

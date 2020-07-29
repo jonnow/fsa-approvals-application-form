@@ -13,7 +13,6 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <form class="form" action="/branching/application-type-answer" method="post">
-
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -25,31 +24,41 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="new-approval" name="type-of-approval" type="radio" value="new-approval" aria-describedby="new-approval-hint">
                 <label class="govuk-label govuk-radios__label" for="new-approval">
-                  New approval
+                  Approval for a new establishment
+                  <span id="new-approval-hint" class="govuk-hint">
+                    A new Food Business Operator or moving to new premises.
+                  </span>
                 </label>
-                <span id="new-approval-hint" class="govuk-hint">
-                  A new food business operator or move to new premises
-                </span>
               </div>
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="change-of-fbo" name="type-of-approval" type="radio" value="change-of-fbo" aria-describedby="change-approval-hint">
                 <label class="govuk-label govuk-radios__label" for="change-of-fbo">
-                  Change of Food Business Operator
+                  Change of legal entity
+                  <span id="change-approval-hint" class="govuk-hint">
+                    A change to the legal entity or ownership of an existing plant
+                  </span>
                 </label>
-                <span id="change-approval-hint" class="govuk-hint">
-                  A change to an approved establishment
-                </span>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="change-of-fbo" name="type-of-approval" type="radio" value="add-activities" aria-describedby="change-approval-hint">
+                <label class="govuk-label govuk-radios__label" for="change-of-fbo">
+                  Approval of additional activities
+                  <span id="change-approval-hint" class="govuk-hint">
+                    A change to the activities at an already approved establishment
+                  </span>
+                </label>
               </div>
 
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="new-fsa-approval" name="type-of-approval" type="radio" value="new-fsa-approval"  aria-describedby="new-fsa-approval-hint">
                 <label class="govuk-label govuk-radios__label" for="new-fsa-approval">
                   New Food Standards Agency approval
+                  <span id="new-fsa-approval-hint" class="govuk-hint">
+                    An existing establishment that is currently approved by the Local Authority.
+                  </span>
                 </label>
-                <span id="new-fsa-approval-hint" class="govuk-hint">
-                  Currently approved by the Local Authority
-                </span>
               </div>
             </div>
           </fieldset>
